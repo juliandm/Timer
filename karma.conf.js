@@ -2,7 +2,7 @@ var webpackConfig = require('./webpack.config.js');
 
 module.exports = function (config) {
   config.set({
-    browsers: ['Firefox'],
+    browsers: ['Chrome'],
     singleRun: true,
     frameworks: ['mocha'],
     files: ['app/tests/**/*.test.jsx'],
@@ -12,12 +12,12 @@ module.exports = function (config) {
     reporters: ['mocha'],
     client: {
       mocha: {
-        timeout: '5000',
+        timeout: '5000'
       }
     },
     webpack: webpackConfig,
     webpackServer: {
-      noInfo: true,
+      noInfo: true
     }
   });
 };
